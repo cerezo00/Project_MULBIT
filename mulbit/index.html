@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>물빛</title>
+    <meta name="description" content="물절약 서포팅 서비스 물빛입니다." />
+    <meta name="author" content="Team MULBIT" />
+    <!-- favicon, 추후에 일러스트 작업 -->
+    <!-- ! favicon 적용 안됨 -->
+    <link rel="icon" type="image/png" href="./imgs/favicon.png" />
+    <!-- fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/282522579e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font: pretendard -->
+    <link
+      href="https://webfontworld.github.io/pretendard/Pretendard.css"
+      rel="stylesheet"
+    />
+    <!-- arrow button -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script defer src="./main.js"></script>
+  </head>
+  <body>
+    <section class="global">
+      <!-- Navbar -->
+      <nav id="navbar">
+        <div class="navbar__logo">
+          <a href="#">MULBIT</a>
+        </div>
+        <div class="navbar__menu">
+          <ul class="navbar__menu">
+            <li>
+              <button class="navbar__menu__item" data-link="#local-water">
+                <i class="fa-solid fa-water fa-lg"></i>
+              </button>
+              <!-- <a href="#" class="navbar__menu__item" data-link="#local-water">
+                <i class="fa-solid fa-water fa-lg"></i>
+              </a> -->
+            </li>
+            <li>
+              <button class="navbar__menu__item" data-link="#my-water">
+                <i class="fa-solid fa-faucet-drip fa-lg"></i>
+              </button>
+              <!-- <a href="#" class="navbar__menu__item" data-link="#my-water">
+                <i class="fa-solid fa-faucet-drip fa-lg"></i>
+              </a> -->
+            </li>
+            <li>
+              <button class="navbar__menu__item" data-link="#coin">
+                <i class="fa-solid fa-coins fa-lg"></i>
+              </button>
+              <!-- <a href="#" class="navbar__menu__item" data-link="#coin">
+                <i class="fa-solid fa-coins fa-lg"></i>
+              </a> -->
+            </li>
+            <li>
+              <button class="navbar__menu__item" data-link="#ai-solution">
+                <i class="fa-solid fa-robot fa-lg"></i>
+              </button>
+
+              <!-- <a href="#" class="navbar__menu__item" data-link="#ai-solution">
+                <i class="fa-solid fa-robot fa-lg"></i>
+              </a> -->
+            </li>
+            <li>
+              <button class="navbar__menu__item" data-link="#my-page">
+                <i class="fa-solid fa-user fa-lg"></i>
+              </button>
+              <!-- <a href="#" class="navbar__menu__item" data-link="#my-page">
+                <i class="fa-solid fa-user fa-lg"></i>
+              </a> -->
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- 우리 지역 수자원 -->
+      <section id="local-water" class="section">
+        <div class="section__container">
+          <h1>우리 지역 수자원</h1>
+          <div class="local-water__content">
+            <!-- 추후에 이미지 대신 자바스크립트 모션 작업 -->
+            <div class="local-water__left">
+              <img src="imgs/local-water-1.png" alt="위험" />
+            </div>
+            <div class="local-water__right">
+              <h2>5월 광주 북구의 수자원은 <br />위험 단계입니다.</h2>
+              <h3>
+                지난 달 보다 10L를 아끼시면 <br />100코인을 획득하실 수
+                있습니다!
+              </h3>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="prevbtn">
+              <button class="material-symbols-outlined">navigate_before</button>
+            </div>
+            <div class="nextbtn">
+              <button class="material-symbols-outlined">navigate_next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 나의 수도 소비량 -->
+      <section id="my-water" class="section">
+        <div class="section__container">
+          <h1>나의 수도 소비량</h1>
+          <div class="my-water__content">
+            <div class="my-water__chart">
+              <div id="chart"></div>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="prevbtn">
+              <button class="material-symbols-outlined">navigate_before</button>
+            </div>
+            <div class="nextbtn">
+              <button class="material-symbols-outlined">navigate_next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 물빛코인 -->
+      <section id="coin" class="section">
+        <div class="section__container">
+          <h1>물빛코인</h1>
+          <div class="coin__content">
+            <div class="coin__left">
+              <img src="./imgs/coin_1.png" alt="coin" />
+            </div>
+            <div class="coin__right">
+              <h1>36,000</h1>
+              <h3>물빛코인은 물을 아끼는 행동을 보상하는 코인입니다.</h3>
+              <h3>물빛코인을 모아서 다양한 상품을 구매하실 수 있습니다.</h3>
+              <button id="to-my-wallet" class="button">
+                <span>Go!</span><span>내 지갑 바로가기</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI솔루션 -->
+      <section id="ai-solution" class="section">
+        <div class="section__container">
+          <h1>AI 솔루션</h1>
+          <div class="ai-solution__content">
+            <div class="solutionbox">
+              <div class="solutionbox__title">000님의 솔루션입니다</div>
+              <div class="solutionbox__content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Pellentesque eget nulla sagittis, congue ligula eu, euismod
+                  dolor. Nulla condimentum, nisi nec lobortis efficitur, sem
+                  metus efficitur orci, et condimentum mi tortor a quam. Mauris
+                  lacinia, neque ac molestie vehicula, lectus enim tincidunt
+                  orci, ut gravida ipsum diam pharetra libero. Aenean non lacus
+                  dui. Aenean quis magna vitae lorem vulputate blandit non eget
+                  ex. Aenean et iaculis erat, id tempor est. In at velit
+                  euismod, imperdiet dolor in, malesuada neque. Pellentesque
+                  habitant morbi tristique senectus et netus et malesuada fames
+                  ac turpis egestas. Donec sed cursus dui. Sed felis est,
+                  porttitor sed magna id, bibendum sollicitudin sapien. Mauris
+                  quis urna eget justo accumsan sodales. Morbi vel lectus elit.
+                  Quisque quis lectus quis felis mattis luctus. Etiam
+                  ullamcorper iaculis lorem, a viverra metus eleifend a.
+                  Curabitur eget semper metus. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit. Praesent ut eros lorem. Proin
+                  malesuada nisi et leo ultrices placerat. Nullam sem enim,
+                  efficitur vitae ornare sed, aliquam vitae quam. Proin urna
+                  ipsum, porttitor vel tortor ut, consequat laoreet elit.
+                  Vestibulum id libero eget justo scelerisque malesuada et a
+                  sem. Pellentesque efficitur imperdiet consequat. Sed eget
+                  tristique orci. Aenean hendrerit, nisi ultricies efficitur
+                  euismod, dui quam vestibulum mi, non fermentum justo turpis
+                  sed augue. Curabitur non leo sit amet erat accumsan ornare ut
+                  finibus ante. Nunc a turpis ultrices ligula gravida fermentum
+                  in eget nibh. Nunc cursus ante ut sapien bibendum malesuada.
+                  Vivamus posuere sodales ultrices. Morbi id consequat risus, at
+                  interdum mauris. Ut egestas nulla ac eros porta euismod. In
+                  non suscipit nibh. Pellentesque dapibus diam efficitur justo
+                  condimentum, vitae gravida sapien accumsan. Pellentesque
+                  sollicitudin ligula et ante vehicula, sed tristique sapien
+                  aliquam. Sed ut dolor vitae dolor auctor ultrices faucibus ut
+                  nisl. Donec dui risus, pretium at nulla sit amet, pharetra
+                  lobortis sapien. Proin a auctor felis. Sed at augue bibendum,
+                  rhoncus velit vitae, condimentum mauris. Curabitur tellus
+                  arcu, rutrum sed leo ut, condimentum bibendum leo.
+                  Pellentesque id velit gravida, ultricies nunc sit amet,
+                  facilisis mi. Donec eget sagittis massa. Aenean diam ante,
+                  accumsan id suscipit at, tristique sed libero. Praesent cursus
+                  mattis vestibulum. Nulla sed lectus dolor. Sed non sagittis
+                  enim. Cras tincidunt rhoncus turpis, tristique malesuada nulla
+                  semper sit amet. In vulputate dignissim purus ut vehicula.
+                  Nulla vehicula metus at lectus iaculis congue. Pellentesque
+                  congue arcu vel justo varius molestie. Etiam turpis dui,
+                  tristique aliquet metus id, efficitur vehicula nisl. Integer
+                  nec lacus tellus. Morbi commodo pretium nunc et commodo.
+                  Aliquam erat volutpat. Donec fringilla elementum risus et
+                  tempor. In dapibus risus iaculis risus iaculis sagittis.
+                </p>
+              </div>
+            </div>
+            <!-- 자가진단 바로가기 버튼-->
+            <div id="selftestlink">
+              <a class="button" href="./selftest.html"
+                ><span>Go!</span><span>자가진단 바로가기</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 마이페이지 -->
+      <section id="my-page" class="section">
+        <div class="section__container">
+          <h1>마이페이지</h1>
+          <div class="my-page__content">
+            <ul class="myBtn">
+              <li>
+                <button class="btn" id="infoBtn">내 정보</button>
+              </li>
+              <li>
+                <button class="btn" id="walletBtn">내 지갑</button>
+              </li>
+            </ul>
+
+            <!-- 라인 -->
+            <div class="line"></div>
+
+            <div class="each_content">
+              <!-- 내정보 버튼 눌렀을 때 보여지는 내용 -->
+              <div id="infoContent" class="btnContent">
+                <ul class="infolist">
+                  <li>
+                    <div class="infolist__title">카카오 ID</div>
+                    <div class="infolist__content">
+                      <span>춘식이</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="infolist__title">닉네임</div>
+                    <div class="nickname">
+                      <div class="infolist__content">
+                        <span>물빛최고</span>
+                      </div>
+                      <button id="update">변경</button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="infolist__title">주소</div>
+                    <div class="infolist__content">
+                      <span>광주광역시 북구 용봉동</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="infolist__title">전자납부번호</div>
+                    <div class="infolist__content" type="text">
+                      <span>12345678</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 내지갑 버튼 눌렀을 때 보여지는 내용 -->
+              <div id="walletContent" class="btnContent">
+                <!-- 코인보유량 -->
+                <div class="mycoin">
+                  <span class="mycoin__title">나의 물빛코인</span>
+                  <span class="mycoin__amount">36,000</span>
+                </div>
+                <!-- 지급내역 확인 -->
+                <div class="payment">
+                  <span class="payment__title">발급 내역 확인</span>
+                  <span class="payment__content"
+                    >발급내역이 이렇습니다.아아아아아아ㅏㅇ아</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
