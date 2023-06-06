@@ -15,9 +15,9 @@
       src="https://kit.fontawesome.com/282522579e.js"
       crossorigin="anonymous"
     ></script>
-    <!-- font: pretendard -->
+    <!-- gmarket sans -->
     <link
-      href="https://webfontworld.github.io/pretendard/Pretendard.css"
+      href="https://webfontworld.github.io/gmarket/GmarketSans.css"
       rel="stylesheet"
     />
     <!-- arrow button -->
@@ -30,269 +30,284 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script defer src="./main.js"></script>
   </head>
+
   <body>
-    <section class="global">
-      <!-- Navbar -->
-      <nav id="navbar">
-        <div class="navbar__logo">
-          <a href="#">MULBIT</a>
-        </div>
-        <div class="navbar__menu">
-          <ul class="navbar__menu">
-            <li>
-              <button class="navbar__menu__item" data-link="#local-water">
-                <i class="fa-solid fa-water fa-lg"></i>
-              </button>
-              <!-- <a href="#" class="navbar__menu__item" data-link="#local-water">
-                <i class="fa-solid fa-water fa-lg"></i>
-              </a> -->
-            </li>
-            <li>
-              <button class="navbar__menu__item" data-link="#my-water">
-                <i class="fa-solid fa-faucet-drip fa-lg"></i>
-              </button>
-              <!-- <a href="#" class="navbar__menu__item" data-link="#my-water">
-                <i class="fa-solid fa-faucet-drip fa-lg"></i>
-              </a> -->
-            </li>
-            <li>
-              <button class="navbar__menu__item" data-link="#coin">
-                <i class="fa-solid fa-coins fa-lg"></i>
-              </button>
-              <!-- <a href="#" class="navbar__menu__item" data-link="#coin">
-                <i class="fa-solid fa-coins fa-lg"></i>
-              </a> -->
-            </li>
-            <li>
-              <button class="navbar__menu__item" data-link="#ai-solution">
-                <i class="fa-solid fa-robot fa-lg"></i>
-              </button>
+    <!-- Header -->
+    <header id="header">
+      <div class="header__logo">
+        <a href="#">MULBIT</a>
+      </div>
+      <button class="header__user-icon" data-link="#my-page">
+        <i class="fa-solid fa-user fa-lg"></i>
+      </button>
+    </header>
 
-              <!-- <a href="#" class="navbar__menu__item" data-link="#ai-solution">
-                <i class="fa-solid fa-robot fa-lg"></i>
-              </a> -->
-            </li>
-            <li>
-              <button class="navbar__menu__item" data-link="#my-page">
-                <i class="fa-solid fa-user fa-lg"></i>
-              </button>
-              <!-- <a href="#" class="navbar__menu__item" data-link="#my-page">
-                <i class="fa-solid fa-user fa-lg"></i>
-              </a> -->
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <!-- Navbar -->
+    <nav id="Navbar">
+      <ul class="navbar__menu">
+        <li>
+          <button class="navbar__item" data-link="#local-water">
+            <img
+              src="./imgs/nav-local-water.png"
+              alt="local-water"
+              style="width: 30px; object-fit: cover"
+            />
+          </button>
+        </li>
+        <li>
+          <button class="navbar__item" data-link="#my-water">
+            <img
+              src="./imgs/nav-my-water.png"
+              alt="my-water"
+              style="width: 30px; object-fit: cover"
+            />
+          </button>
+        </li>
+        <li>
+          <button class="navbar__item" data-link="#coin">
+            <img
+              src="./imgs/nav-coin.png"
+              alt="coin"
+              style="width: 30px; object-fit: cover"
+            />
+          </button>
+        </li>
+        <li>
+          <button class="navbar__item" data-link="#ai-solution">
+            <img
+              src="./imgs/nav-ai.png"
+              alt="ai"
+              style="width: 30px; object-fit: cover"
+            />
+          </button>
+        </li>
+      </ul>
+    </nav>
 
-      <!-- 우리 지역 수자원 -->
-      <section id="local-water" class="section">
-        <div class="section__container">
-          <h1>우리 지역 수자원</h1>
-          <div class="local-water__content">
-            <!-- 추후에 이미지 대신 자바스크립트 모션 작업 -->
-            <div class="local-water__left">
-              <img src="imgs/local-water-1.png" alt="위험" />
-            </div>
-            <div class="local-water__right">
-              <h2>5월 광주 북구의 수자원은 <br />위험 단계입니다.</h2>
-              <h3>
-                지난 달 보다 10L를 아끼시면 <br />100코인을 획득하실 수
-                있습니다!
-              </h3>
-            </div>
+    <!-- Home -->
+    <section id="home" class="section">
+      <div class="home__text">
+        <h1 class="home-title">물 빛</h1>
+        <h2 class="home-description">물 절약의 시작, 물빛과 함께</h2>
+      </div>
+      <div class="home__cards">
+        <button class="home__card" data-link="#local-water">
+          <img
+            id="local-water-card"
+            src="imgs\localWaterCard.png"
+            style="object-fit: cover"
+          />
+        </button>
+        <button class="home__card" data-link="#my-water">
+          <img
+            id="my-water-card"
+            src="imgs\myWaterCard.png"
+            style="object-fit: cover"
+          />
+        </button>
+        <button class="home__card" data-link="#coin">
+          <img
+            id="coin-card"
+            src="imgs\coinCard.png"
+            style="object-fit: cover"
+          />
+        </button>
+        <button class="home__card" data-link="#ai-solution">
+          <img
+            id="ai-solution-card"
+            src="imgs\aiCard.png"
+            style="object-fit: cover"
+          />
+        </button>
+      </div>
+    </section>
+
+    <!-- Local Water (우리 지역 수자원) -->
+    <section id="local-water" class="section">
+      <div class="section__text">
+        <h3>우리 지역 수자원</h3>
+        <h4>
+          우리 지역의 수원지 정보를 조회하고, 딥러닝기술을 기반으로 예측된 이번
+          달 가용 수자원 량을 확인하세요!
+        </h4>
+      </div>
+      <div class="section__content">
+        <!-- 추후에 이미지 대신 자바스크립트 모션 작업 -->
+        <div class="prevbtn">
+          <button class="material-symbols-outlined">navigate_before</button>
+        </div>
+        <div class="local-water__left">
+          <img
+            src="imgs/local-water-1.png"
+            alt="위험"
+            style="width: 440px; object-fit: cover"
+          />
+        </div>
+        <div class="local-water__right">
+          <div class="local-water__text-1">
+            5월 광주 북구의 수자원은 <br /><span>위험</span> 단계입니다.
           </div>
-          <div class="buttons">
-            <div class="prevbtn">
-              <button class="material-symbols-outlined">navigate_before</button>
-            </div>
-            <div class="nextbtn">
-              <button class="material-symbols-outlined">navigate_next</button>
-            </div>
+          <div class="local-water__text-2">
+            지난 달 보다 10L를 아끼시면 <br />100코인을 획득하실 수 있습니다!
           </div>
         </div>
-      </section>
+        <div class="nextbtn">
+          <button class="material-symbols-outlined">navigate_next</button>
+        </div>
+      </div>
+    </section>
 
-      <!-- 나의 수도 소비량 -->
-      <section id="my-water" class="section">
-        <div class="section__container">
-          <h1>나의 수도 소비량</h1>
-          <div class="my-water__content">
-            <div class="my-water__chart">
-              <div id="chart"></div>
-            </div>
+    <!-- 나의 수도 소비량 -->
+    <section id="my-water" class="section">
+      <div class="section__title">
+        <h3>나의 수도 소비량</h3>
+        <h4>나의 수도 소비량을 확인해보세요!</h4>
+      </div>
+      <div class="section__content">
+        <div class="prevbtn">
+          <button class="material-symbols-outlined">navigate_before</button>
+        </div>
+        <div class="my-water__chart">
+          <div id="chart"></div>
+        </div>
+        <div class="nextbtn">
+          <button class="material-symbols-outlined">navigate_next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 물빛코인 -->
+    <section id="coin" class="section">
+      <div class="section__title">
+        <h3>물빛 코인</h3>
+        <h4>물 절약을 실천해서 물빛코인을 받아볼 수 있어요!</h4>
+      </div>
+      <div class="section__content">
+        <div class="coin__content__img">
+          <img src="imgs\coin-front.png" alt="coin" style="width: 270px" />
+        </div>
+        <div class="coin__content__text">
+          <h2>나의코인</h2>
+          <h3>36000</h3>
+        </div>
+        <div class="coin__cards">
+          <div class="coin__card" id="coinCard1">
+            <span>NFT</span>
           </div>
-          <div class="buttons">
-            <div class="prevbtn">
-              <button class="material-symbols-outlined">navigate_before</button>
-            </div>
-            <div class="nextbtn">
-              <button class="material-symbols-outlined">navigate_next</button>
-            </div>
+          <div class="coin__card" id="coinCard2">
+            <span>블록체인</span>
+          </div>
+          <div class="coin__card" id="coinCard3">
+            <span>지역화폐</span>
+          </div>
+          <div class="coin__card" id="coinCard4">
+            <span>제휴 상품권</span>
+          </div>
+          <div class="coin__card" id="coinCard5">
+            <span
+              >지역 먹거리 <br />
+              상점</span
+            >
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- 물빛코인 -->
-      <section id="coin" class="section">
-        <div class="section__container">
-          <h1>물빛코인</h1>
-          <div class="coin__content">
-            <div class="coin__left">
-              <img src="./imgs/coin_1.png" alt="coin" />
-            </div>
-            <div class="coin__right">
-              <h1>36,000</h1>
-              <h3>물빛코인은 물을 아끼는 행동을 보상하는 코인입니다.</h3>
-              <h3>물빛코인을 모아서 다양한 상품을 구매하실 수 있습니다.</h3>
-              <button id="to-my-wallet" class="button">
-                <span>Go!</span><span>내 지갑 바로가기</span>
-              </button>
-            </div>
+    <!-- AI솔루션 -->
+    <section id="ai-solution" class="section">
+      <div class="section__title">
+        <h3>AI 솔루션</h3>
+        <h4>
+          자가진단 후 나의 물 소비 습관을 분석하고 다양한 ai 솔루션을
+          받아보세요!
+        </h4>
+      </div>
+      <div class="section__content">
+        <ul class="ai-solution__tabs">
+          <li>
+            <button class="tab" id="result">
+              <p>진단결과</p>
+            </button>
+          </li>
+          <li>
+            <button class="tab" id="analysis">
+              <p>진단분석</p>
+            </button>
+          </li>
+          <li>
+            <button class="tab" id="prev-result">
+              <p>이전진단</p>
+            </button>
+          </li>
+        </ul>
+        <div class="ai-solution__eachContent">
+          <div id="resusltContent" class="ai-solution__tabContent">
+            진단결과 내용
+          </div>
+          <div id="analysisContent" class="ai-solution__tabContent">
+            진단분석 내용
+          </div>
+          <div id="prev-resultContent" class="ai-solution__tabContent">
+            이전진단 내용
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- AI솔루션 -->
-      <section id="ai-solution" class="section">
-        <div class="section__container">
-          <h1>AI 솔루션</h1>
-          <div class="ai-solution__content">
-            <div class="solutionbox">
-              <div class="solutionbox__title">000님의 솔루션입니다</div>
-              <div class="solutionbox__content">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Pellentesque eget nulla sagittis, congue ligula eu, euismod
-                  dolor. Nulla condimentum, nisi nec lobortis efficitur, sem
-                  metus efficitur orci, et condimentum mi tortor a quam. Mauris
-                  lacinia, neque ac molestie vehicula, lectus enim tincidunt
-                  orci, ut gravida ipsum diam pharetra libero. Aenean non lacus
-                  dui. Aenean quis magna vitae lorem vulputate blandit non eget
-                  ex. Aenean et iaculis erat, id tempor est. In at velit
-                  euismod, imperdiet dolor in, malesuada neque. Pellentesque
-                  habitant morbi tristique senectus et netus et malesuada fames
-                  ac turpis egestas. Donec sed cursus dui. Sed felis est,
-                  porttitor sed magna id, bibendum sollicitudin sapien. Mauris
-                  quis urna eget justo accumsan sodales. Morbi vel lectus elit.
-                  Quisque quis lectus quis felis mattis luctus. Etiam
-                  ullamcorper iaculis lorem, a viverra metus eleifend a.
-                  Curabitur eget semper metus. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Praesent ut eros lorem. Proin
-                  malesuada nisi et leo ultrices placerat. Nullam sem enim,
-                  efficitur vitae ornare sed, aliquam vitae quam. Proin urna
-                  ipsum, porttitor vel tortor ut, consequat laoreet elit.
-                  Vestibulum id libero eget justo scelerisque malesuada et a
-                  sem. Pellentesque efficitur imperdiet consequat. Sed eget
-                  tristique orci. Aenean hendrerit, nisi ultricies efficitur
-                  euismod, dui quam vestibulum mi, non fermentum justo turpis
-                  sed augue. Curabitur non leo sit amet erat accumsan ornare ut
-                  finibus ante. Nunc a turpis ultrices ligula gravida fermentum
-                  in eget nibh. Nunc cursus ante ut sapien bibendum malesuada.
-                  Vivamus posuere sodales ultrices. Morbi id consequat risus, at
-                  interdum mauris. Ut egestas nulla ac eros porta euismod. In
-                  non suscipit nibh. Pellentesque dapibus diam efficitur justo
-                  condimentum, vitae gravida sapien accumsan. Pellentesque
-                  sollicitudin ligula et ante vehicula, sed tristique sapien
-                  aliquam. Sed ut dolor vitae dolor auctor ultrices faucibus ut
-                  nisl. Donec dui risus, pretium at nulla sit amet, pharetra
-                  lobortis sapien. Proin a auctor felis. Sed at augue bibendum,
-                  rhoncus velit vitae, condimentum mauris. Curabitur tellus
-                  arcu, rutrum sed leo ut, condimentum bibendum leo.
-                  Pellentesque id velit gravida, ultricies nunc sit amet,
-                  facilisis mi. Donec eget sagittis massa. Aenean diam ante,
-                  accumsan id suscipit at, tristique sed libero. Praesent cursus
-                  mattis vestibulum. Nulla sed lectus dolor. Sed non sagittis
-                  enim. Cras tincidunt rhoncus turpis, tristique malesuada nulla
-                  semper sit amet. In vulputate dignissim purus ut vehicula.
-                  Nulla vehicula metus at lectus iaculis congue. Pellentesque
-                  congue arcu vel justo varius molestie. Etiam turpis dui,
-                  tristique aliquet metus id, efficitur vehicula nisl. Integer
-                  nec lacus tellus. Morbi commodo pretium nunc et commodo.
-                  Aliquam erat volutpat. Donec fringilla elementum risus et
-                  tempor. In dapibus risus iaculis risus iaculis sagittis.
-                </p>
+    <!-- 마이페이지 -->
+    <section id="my-page" class="section">
+      <div class="section__title">
+        <h3>계정 관리</h3>
+      </div>
+      <div class="section__content">
+        <ul class="tab-menu">
+          <li><a href="#account">계정</a></li>
+          <li><a href="#address">주소</a></li>
+          <li><a href="#coin">내 코인</a></li>
+        </ul>
+        <div class="tab-content">
+          <div id="account">
+            <div class="tab-content__item">
+              <div class="tab-content__left">
+                <div class="question">카카오 ID</div>
+                <div class="answer">mulbit</div>
+              </div>
+              <div class="tab-content__right">
+                <button class="edit">수정</button>
               </div>
             </div>
-            <!-- 자가진단 바로가기 버튼-->
-            <div id="selftestlink">
-              <a class="button" href="./selftest.html"
-                ><span>Go!</span><span>자가진단 바로가기</span></a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 마이페이지 -->
-      <section id="my-page" class="section">
-        <div class="section__container">
-          <h1>마이페이지</h1>
-          <div class="my-page__content">
-            <ul class="myBtn">
-              <li>
-                <button class="btn" id="infoBtn">내 정보</button>
-              </li>
-              <li>
-                <button class="btn" id="walletBtn">내 지갑</button>
-              </li>
-            </ul>
-
-            <!-- 라인 -->
-            <div class="line"></div>
-
-            <div class="each_content">
-              <!-- 내정보 버튼 눌렀을 때 보여지는 내용 -->
-              <div id="infoContent" class="btnContent">
-                <ul class="infolist">
-                  <li>
-                    <div class="infolist__title">카카오 ID</div>
-                    <div class="infolist__content">
-                      <span>춘식이</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="infolist__title">닉네임</div>
-                    <div class="nickname">
-                      <div class="infolist__content">
-                        <span>물빛최고</span>
-                      </div>
-                      <button id="update">변경</button>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="infolist__title">주소</div>
-                    <div class="infolist__content">
-                      <span>광주광역시 북구 용봉동</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="infolist__title">전자납부번호</div>
-                    <div class="infolist__content" type="text">
-                      <span>12345678</span>
-                    </div>
-                  </li>
-                </ul>
+            <div class="tab-content__item">
+              <div class="tab-content__left">
+                <div class="question">이메일</div>
+                <div class="answer">mulbit@gmail.com</div>
               </div>
-
-              <!-- 내지갑 버튼 눌렀을 때 보여지는 내용 -->
-              <div id="walletContent" class="btnContent">
-                <!-- 코인보유량 -->
-                <div class="mycoin">
-                  <span class="mycoin__title">나의 물빛코인</span>
-                  <span class="mycoin__amount">36,000</span>
-                </div>
-                <!-- 지급내역 확인 -->
-                <div class="payment">
-                  <span class="payment__title">발급 내역 확인</span>
-                  <span class="payment__content"
-                    >발급내역이 이렇습니다.아아아아아아ㅏㅇ아</span
-                  >
-                </div>
+              <div class="tab-content__right">
+                <button class="edit">수정</button>
+              </div>
+            </div>
+            <div class="tab-content__item">
+              <div class="tab-content__left">
+                <div class="question">닉네임</div>
+                <div class="answer">물빛짱</div>
+              </div>
+              <div class="tab-content__right">
+                <button class="edit">수정</button>
+              </div>
+            </div>
+            <div class="tab-content__item">
+              <div class="tab-content__left">
+                <div class="question">전자납부번호</div>
+                <div class="answer">1234-5678-90</div>
+              </div>
+              <div class="tab-content__right">
+                <button class="edit">수정</button>
               </div>
             </div>
           </div>
+          <div id="address"></div>
+          <div id="coin"></div>
         </div>
-      </section>
+      </div>
     </section>
   </body>
 </html>

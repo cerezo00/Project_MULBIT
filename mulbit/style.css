@@ -1,28 +1,24 @@
 /* Global */
 :root {
   /* Color */
-  --color-white: #ffffff;
-  --color-light-gray: #f2f3f5;
-  --color-black: #111111;
-  --color-gray: #23303d;
-  --color-blue: #146eb4;
-  --color-yellow: #ff9900;
+  --color-white: #fff;
+  --color-bg-gray: #f9fafb;
+  --color-title: #191f28;
+  --color-subtitle: #8b95a1;
+  --color-body: #333d4b;
 
-  /* Font size*/
-  --font-large: 48px;
-  --font-medium: 28px;
-  --font-regular: 18px;
+  /* Fonst size */
+  --font-title: 140px;
+  --font-subtitle: 48px;
+  --font-section-title: 32px;
+  --font-section-subtitle: 16px;
 
   /* Font weight */
-  --weight-bold: 700;
-  --weight-semi-bold: 600;
-  --weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-normal: 500;
 
-  /* Size */
-  --size-border-radius: 16px;
-
-  /* Annimation */
-  --animation-duration: 300ms;
+  /* Animation */
+  --animation-duration: 0.3s;
 }
 
 /* Universal tags */
@@ -31,9 +27,10 @@
 }
 
 body {
+  font-family: 'GmarketSans', sans-serif;
+  font-weight: var(--font-weight-normal);
   margin: 0;
   cursor: default;
-  padding-top: 80px; /* navbar의 높이만큼 padding-top 속성 추가 */
 }
 
 a {
@@ -42,422 +39,352 @@ a {
 }
 
 ul {
-  padding-left: 0;
-}
-
-li {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 button {
   background-color: transparent;
-  cursor: pointer;
   border: none;
   outline: none;
+  cursor: pointer;
+  z-index: 999;
 }
 
 /* Typography */
 h1 {
-  font-size: var(--font-large);
-  font-weight: var(--weight-bold);
-  color: var(--color-black);
-  margin: 24px 0px;
+  font-size: var(--font-title);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-title);
+  margin: 0 0 20px 0;
 }
 
 h2 {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
-  color: var(--color-black);
-  margin: 8px 0;
+  font-size: var(--font-subtitle);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-title);
+  margin: 0;
 }
 
 h3 {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
-  color: var(--color-black);
-  margin: 8px 0;
+  font-size: var(--font-section-title);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-title);
+  margin: 0 0 20px 0;
 }
 
-p {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
-  color: var(--color-black);
-  margin: 4px 0;
+h4 {
+  font-size: var(--font-section-subtitle);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-subtitle);
+  margin: 0;
 }
 
-img {
-  width: 420px;
-  height: 420px;
-  object-fit: contain;
-}
-
-/* Section common */
+/* Section Common */
 .section {
-  height: 100vh;
+  width: 1920px;
+  height: 1080px;
+  padding: 160px 320px;
+  display: flex;
   position: relative;
-  background-color: rgb(216, 226, 239);
-  justify-content: center;
-
-  /* background-image: url('./imgs/bg.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; */
 }
 
-/* 전 섹션 공통 하얀 박스 */
-.section__container {
+#my-water,
+#ai-solution {
+  background-color: #f9fafb;
+}
+
+#local-water .section__content,
+#my-water .section__content {
   display: flex;
-  /* flex-flow: column wrap; */
-  flex-direction: column;
   justify-content: space-between;
-  text-align: start;
-  position: relative;
-  padding: 0px 50px;
-  width: 90%;
-  height: 70%;
-  top: 15%;
-  background-color: var(--color-white);
-  box-shadow: 0px 15px 30px -15px #bdbdbd;
-  margin: auto;
-  border-radius: var(--size-border-radius);
+  align-items: center;
 }
 
 /* Navbar */
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--color-gray);
-  align-items: center;
-  color: var(--color-white);
-  padding: 16px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999; /* 다른 요소보다 위에 나타나도록 z-index 속성 추가 */
-}
-
-.navbar__logo {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
-}
-
-.navbar__menu {
-  display: flex;
-}
-
-.navbar__menu button {
-  color: inherit;
-}
-
-.navbar__menu__item {
-  padding: 8px 12px;
+#Navbar {
+  width: 60px;
+  height: 300px;
+  position: sticky;
+  left: 40px;
+  top: 390px;
   margin: 0 4px;
-  cursor: pointer;
-}
-
-.navbar__menu__item.active {
+  padding: 10px;
+  border: 1px solid #e8e8e8;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
   background-color: #fff;
 }
-.navbar__menu__item i:hover {
-  /* transform: rotate(30deg) scale(1.2); */
-}
 
-/* 우리 지역 수자원 (가용수자원량) */
-.local-water__content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.buttons {
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-/* 버튼에 호버링하면 손 모양 나오게 */
-.buttons button:hover {
+.navbar__item {
+  padding: 16px 10px;
+  margin: 0 0;
   cursor: pointer;
 }
 
-.prevbtn .material-symbols-outlined,
-.nextbtn .material-symbols-outlined {
-  font-size: 50px;
-  color: var(--color-gray);
-  margin: 0 48px;
+.navbar__item.active {
+  background-color: #fff;
 }
 
-.local-water__left,
-.local-water__right {
-  /* width: 50%;
-  height: 100%; */
+/* Header */
+#header {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 999;
+  background-color: rgba(72, 164, 250, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.header__logo a {
+  font-size: 24px;
+  color: #fff;
+}
+
+.header__user-icon {
+  position: absolute;
+  right: 30px;
+}
+
+/* Home */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home__text {
+  text-align: center;
+}
+
+.home__cards {
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  flex-direction: column;
-  padding: 0 56px;
+  margin: 0px;
+  padding: 0px;
 }
 
-/* 나의 수도 소비량 (사용자 수도 조회) */
-.my-water__content {
+.home__card {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #fff;
 }
 
-.my-water__chart {
-  width: 800px;
+.home__card img {
+  width: 290px;
   height: 400px;
+  border-radius: 20px;
+  outline: solid 1px var(--color-subtitle);
 }
 
-/* 물빛코인 */
-.coin__content {
+#local-water-card,
+#my-water-card,
+#coin-card {
+  margin: 0 40px 0 0;
+}
+
+/* Local Water */
+#local-water {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 5%;
-  padding: 30px;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* AI 솔루션 */
-.ai-solution__content {
+#local-water .section__content {
+  margin: 0 0 60px 0;
+}
+
+.local-water__text-1 {
+  font-size: 36px;
+  color: var(--color-body);
+  margin: 0 0 40px 0;
+}
+
+.local-water__text-2 {
+  font-size: 24px;
+  color: var(--color-subtitle);
+}
+
+/* My Water */
+#my-water {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#my-water .section__content {
+  margin: 0 0 60px 0;
+}
+
+/* Mulbit Coin */
+#coin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#coin .section__content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: auto;
-  padding: 32px;
-}
-
-.solutionbox {
-  width: 900px;
-  height: 300px;
-  /* position: relative; */
-  /* top: 20px; */
-  border: 1px solid #ccc;
-  box-shadow: 0px 15px 10px -15px #111;
-  overflow: auto;
-  /* overflow-x: hidden; */
-}
-
-.solutionbox__title {
-  width: 100%;
-  /* height: 50px; */
-  font-size: var(--font-medium);
-  margin: 20px 20px;
-}
-
-.solutionbox__content {
-  width: 90%;
-  margin-left: 20px;
-  font-size: var(--font-regular);
-}
-
-#selftestlink {
-  display: flex;
-  padding: 30px 30px;
-}
-
-.button {
-  /* position: absolute; */
-  /* bottom: 25px;
-  right: 400px;
-  padding: 10px; */
-  /* border: 1px solid #ccc;*/
-  /* box-shadow: 0px 15px 10px -15px #111; */
-  width: 150px;
-  height: 40px;
-  line-height: 42px;
-  -webkit-perspective: 230px;
-  perspective: 230px;
-}
-
-.button span {
-  font-weight: 600;
-  color: white;
-  background: rgb(0, 172, 238);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 172, 238, 1) 0%,
-    rgba(2, 126, 251, 1) 100%
-  );
-  display: block;
-  position: absolute;
-  width: 150px;
-  height: 40px;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  margin: 0;
   text-align: center;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
-.button span:nth-child(1) {
-  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
-  -webkit-transform: rotateX(90deg);
-  -moz-transform: rotateX(90deg);
-  transform: rotateX(90deg);
-  -webkit-transform-origin: 50% 50% -20px;
-  -moz-transform-origin: 50% 50% -20px;
-  transform-origin: 50% 50% -20px;
+.coin__content__text h2 {
+  margin: 60px 0 20px 0;
 }
 
-.button span:nth-child(2) {
-  -webkit-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-  -webkit-transform-origin: 50% 50% -20px;
-  -moz-transform-origin: 50% 50% -20px;
-  transform-origin: 50% 50% -20px;
+.coin__cards {
+  display: flex;
 }
 
-.button:hover span:nth-child(1) {
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  -webkit-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-}
-
-.button:hover span:nth-child(2) {
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  color: transparent;
-  -webkit-transform: rotateX(-90deg);
-  -moz-transform: rotateX(-90deg);
-  transform: rotateX(-90deg);
-}
-
-/* ! 마이페이지 - 수정 요함 */
-/* #my-page {
+.coin__card {
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 8px #3b3b3b29;
+  margin: 10px 20px 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+}
 
-.my-page__content {
+.coin__card span {
+  font-size: 24px;
+  color: var(--color-white);
+}
+
+#coinCard1 {
+  background-color: #ffc6cc;
+}
+
+#coinCard2 {
+  background-color: #ecc1f8;
+}
+
+#coinCard3 {
+  background-color: #ffe28b;
+}
+
+#coinCard4 {
+  background-color: #b9daff;
+}
+
+#coinCard5 {
+  background-color: #98e1a0;
+}
+
+/* AI Solution */
+#ai-solution {
   display: flex;
-  position: relative;
-  width: 800px;
-  height: 400px;
-  left: 20%;
-  bottom: 100px;
-  top: 30px;
+  flex-direction: column;
 }
 
-.my-page__content .myBtn {
-  width: 180px;
-}
-
-.my-page__content .btn {
-  font-size: var(--font-medium);
+.ai-solution__tabs {
+  display: flex;
+  justify-content: center;
+  width: 1000px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-top: 150px;
 }
 
-.my-page .btn .active {
-  font-weight: var(--weight-bold);
-}
-
-.my-page__content .line {
-  border: 2px solid #707070;
-}
-
-.each_content {
+.ai-solution__tabs li {
+  width: 100%;
   display: flex;
-  width: 400px;
-  height: 100%;
-  position: absolute;
-  right: 150px;
-  margin-left: 50px;
-  flex: 1;
+  justify-content: center;
+  border-right: 1px solid #ccc;
+}
+
+.ai-solution__tabs li:last-child {
+  border-right: none;
+}
+
+.ai-solution__tabs tab {
+  width: 100%;
+}
+
+p {
+  font-size: 20px;
+  font-weight: var(--font-weight-normal);
+  /* color: var(--color-white); */
+  margin: 0;
+}
+
+.ai-solution__eachContent {
+  display: flex;
+  width: 1060px;
+  height: 460px;
+  border-top: 20px solid #8b95a1;
+  box-shadow: 0px 5px 5px #00000053;
+  position: relative;
 }
 
 .btnContent {
-  opacity: 0;
-  transition: opacity 1s ease;
-  display: flex;
+  flex: 1;
+  position: absolute;
   width: 100%;
   height: 100%;
-  display: none;
 }
 
-#infoContent {
-  position: absolute;
+/* 마이페이지 */
+#my-page {
+  display: flex;
+  flex-direction: column;
 }
 
-.infolist li {
+.tab-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  margin-top: 80px;
+  /* width: 1000px;
+  padding: 10px;
+  margin: 0; */
+}
+
+.tab-menu li {
+  width: 400px;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab-menu li a {
   margin-bottom: 20px;
 }
 
-.infolist__title {
+.tab-content__item {
   display: flex;
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  margin-bottom: 5px;
+  justify-content: space-between;
+  height: 180px;
+  padding-top: 60px;
+  border-bottom: 1px solid #ccc;
 }
 
-.infolist__content {
-  width: 250px;
-  height: 30px;
-  background-color: #e2e2e266;
-  border-radius: 4px;
-  overflow: auto;
-  display: flex;
-  align-items: center;
+.question {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-body);
+  margin-bottom: 20px;
 }
 
-.infolist__content span {
-  font-size: var(--font-regular);
+.answer {
+  font-size: 16px;
+  color: var(--color-body);
 }
 
-.nickname {
-  display: flex;
-}
-
-/* 내 지갑 내용 */
-#walletContent {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-}
-
-.mycoin {
-  font-size: var(--font-medium);
-  display: flex;
-  align-items: center;
-}
-
-.mycoin__title {
-  font-size: var(--font-medium);
-}
-
-.mycoin__amount {
-  margin-left: 20px;
-  margin-bottom: 5px;
-}
-
-.payment {
-  margin-top: 20px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.payment__title {
-  font-size: var(--font-medium);
-}
-
-.payment__content {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin-left: 10px;
+.edit {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-body);
+  text-decoration: underline;
 }
