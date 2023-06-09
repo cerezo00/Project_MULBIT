@@ -103,7 +103,7 @@ var options = {
 var chart = new ApexCharts(document.querySelector('#chart'), options);
 chart.render();
 
-// Handle scrolling when tapping on the navbar menu
+// navbar 스크롤링
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
@@ -121,25 +121,94 @@ toMyPage.addEventListener('click', (event) => {
   elem.scrollIntoView({ behavior: 'smooth' });
 });
 
+// 헤더 투명도 조절
+const header = document.querySelector('.header');
+const headerHeight = header.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  if (window.scrollY > headerHeight) {
+    header.classList.add('header--dark');
+  } else {
+    header.classList.remove('header--dark');
+  }
+});
+
 // 홈 스크롤링
-const homeCard = document.querySelector('.home__card');
-homeCard.addEventListener('click', (event) => {
-  const target = event.target;
-  const link = target.dataset.link;
-  const elem = document.querySelector(link);
-  elem.scrollIntoView({ behavior: 'smooth' });
+const homeBtns = document.querySelectorAll('.home__btn');
+homeBtns.forEach((homeBtn) => {
+  homeBtn.addEventListener('click', (event) => {
+    const target = event.target;
+    const link = target.dataset.link;
+    const elem = document.querySelector(link);
+    elem.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+///ai 솔루션 탭 전환
+$(document).ready(function () {
+  $('ul.tabs li').click(function () {
+    var tab_id = $(this).attr('data-tab');
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
+    $(this).addClass('current');
+    $('#' + tab_id).addClass('current');
+    $('.tab-content current').fadeIn(3000);
+  });
 });
 
 // 마이페이지
 $(function () {
-  $('.tab-content > div').hide();
-  $('.tab-menu a')
+  $('.mytab-content > div').hide();
+  $('.mytab-menu a')
     .click(function () {
-      $('.tab-content > div').hide().filter(this.hash).fadeIn();
-      $('.tab-menu a').removeClass('active');
+      $('.mytab-content > div').hide().filter(this.hash).fadeIn();
+      $('.mytab-menu a').removeClass('active');
       $(this).addClass('active');
       return false;
     })
     .filter(':eq(0)')
     .click();
+});
+
+// $(function () {
+//   $('.tab-content > div').hide();
+//   $('.tab-menu a')
+//     .click(function () {
+//       $('.tab-content > div').hide().filter(this.hash).fadeIn();
+//       $('.tab-menu a').removeClass('active');
+//       $(this).addClass('active');
+//       return false;
+//     })
+//     .filter(':eq(0)')
+//     .click();
+// });
+
+// .prevbtn, .nextbtn 클릭시 .local-water__content 변경
+$(document).ready(function () {
+  $('.local-water__content').first().addClass('active');
+  $('.local-water__content').hide();
+  $('.active').show();
+
+  $('#local-water__nextbtn').click(function () {
+    $('.active').removeClass('active').addClass('oldActive');
+    if ($('.oldActive').is(':last-child')) {
+      $('.local-water__content').first().addClass('active');
+    } else {
+      $('.oldActive').next().addClass('active');
+    }
+    $('.oldActive').removeClass('oldActive');
+    $('.local-water__content').hide();
+    $('.active').show();
+  });
+
+  $('#local-water__prevbtn').click(function () {
+    $('.active').removeClass('active').addClass('oldActive');
+    if ($('.oldActive').is(':first-child')) {
+      $('.local-water__content').last().addClass('active');
+    } else {
+      $('.oldActive').prev().addClass('active');
+    }
+    $('.oldActive').removeClass('oldActive');
+    $('.local-water__content').hide();
+    $('.active').show();
+  });
 });
