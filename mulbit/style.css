@@ -808,7 +808,7 @@ p {
   justify-content: space-between;
   width: 1280px;
   margin-top: 80px;
-  padding: 10px;
+  padding: 0;
   margin: 0;
 }
 
@@ -819,6 +819,10 @@ p {
   margin-right: 25px;
 }
 
+.mytab-menu li:last-child {
+  margin-right: 0;
+}
+
 .mytab-menu li a {
   font-size: 20px;
   margin-bottom: 20px;
@@ -826,25 +830,26 @@ p {
 
 .mytab-menu a.active {
   font-weight: bold;
+  color: var(--color-dark-blue);
 }
 
 .mytab-content__item {
   display: flex;
   justify-content: space-between;
-  height: 180px;
-  padding-top: 60px;
+  height: 140px;
+  padding-top: 40px;
   border-bottom: 1px solid #ccc;
 }
 
 .question {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: var(--color-body);
   margin-bottom: 20px;
 }
 
 .answer {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--color-body);
 }
 
@@ -857,19 +862,19 @@ p {
 
 /* 주소 */
 #address .mytab-content__item {
-  border-bottom: none;
+  border-bottom: 1px solid #ccc;
 }
 
 #address .question {
-  font-size: 24px;
+  font-size: 14px;
 }
 
 #address .answer {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 #address .edit {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 /* 내 코인*/
@@ -878,11 +883,11 @@ p {
 }
 
 #coin .question {
-  font-size: 22px;
+  font-size: 16px;
 }
 
 #coin .answer {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 #coin .coin-searchDate {
@@ -890,12 +895,12 @@ p {
 }
 
 #coin #searchDate input {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 #coin #searchDate button {
   border: 1px solid #ccc;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 #coin-payment {
@@ -903,7 +908,7 @@ p {
 }
 
 .coin-lists {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .coin-list {
@@ -926,15 +931,17 @@ p {
 }
 
 .coin-list__date {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .coin-list__time {
-  padding: 5px;
+  /* padding: 5px; */
+  font-size: 14px;
+  color: transparent;
 }
 
 .coin-month {
-  font-size: 24px;
+  font-size: 12px;
   color: rgba(19, 130, 233, 0.5);
 }
 
