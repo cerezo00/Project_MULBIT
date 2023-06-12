@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>물빛</title>
+    <meta name="description" content="물절약 서포팅 서비스 물빛입니다." />
+    <meta name="author" content="Team MULBIT" />
+    <!-- favicon, 추후에 일러스트 작업 -->
+    <link rel="icon" type="image/png" href="./imgs/favicon.png" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- gmarket sans -->
+    <link
+      href="https://webfontworld.github.io/gmarket/GmarketSans.css"
+      rel="stylesheet"
+    />
+    <!-- arrow button -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- tab -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="./main.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">
+        <a href="#">MULBIT</a>
+      </div>
+      <button class="header__user-icon" data-link="#my-page">
+        <i class="fa-solid fa-user fa-lg"></i>
+      </button>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="section index">
+      <div class="home__text">
+        <h1 class="home-title">물 빛</h1>
+        <h2 class="home-description">물 절약의 시작, 물빛과 함께</h2>
+      </div>
+      <div class="login-btn">
+        <a href="javascript:kakaoLogin()"
+          ><img
+            src="https://t1.daumcdn.net/cfile/tistory/99BEE8465C3D7D1214"
+            alt="카카오로그인"
+            style="height: 60px; width: auto"
+        /></a>
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+        <script>
+          //3fcdd10431f56b4a8f6c7374515a6dbb
+          window.Kakao.init('3fcdd10431f56b4a8f6c7374515a6dbb');
+
+          function kakaoLogin() {
+            window.Kakao.Auth.login({
+              scope: 'profile_nickname, account_email, gender',
+              success: function (authObj) {
+                console.log(authObj);
+                window.Kakao.API.request({
+                  url: '/v2/user/me',
+                  success: (res) => {
+                    const kakao_account = res.kakao_account;
+                    console.log(kakao_account);
+                  },
+                });
+              },
+            });
+          }
+        </script>
+      </div>
+      <!-- main.html로 이동하는 버튼 만들어줘 -->
+      <div class="to-main">
+        <button onclick="location.href='main.html'">to main</button>
+      </div>
+    </section>
+  </body>
+</html>

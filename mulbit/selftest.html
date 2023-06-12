@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./imgs/favicon.png" />
+    <title>물 소비 습관 자가진단</title>
+    <script defer src="./main.js"></script>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        background-color: royalblue;
+      }
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: whitesmoke;
+        width: 50%;
+        height: 80%;
+        border-radius: 15px;
+        padding: 30px;
+        margin: 60px;
+      }
+
+      .section {
+        border-bottom: 1px solid #ccc;
+        margin-top: 80px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        color: #191f28;
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: 50;
+        color: #6b7684;
+        margin: 6px 0 0 0;
+      }
+
+      h3 {
+        font-size: 16 px;
+      }
+
+      .question {
+        margin-bottom: 30px;
+      }
+
+      .options label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      button {
+        all: unset;
+      }
+
+      .submit-btn {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: #105fa9;
+        border-radius: 10px;
+        outline: solid 2px #105fa9;
+        text-decoration: none;
+        font-size: 14px;
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        margin: 50px auto 0 auto;
+        font-weight: bold;
+      }
+
+      .submit-btn:hover {
+        background-color: #105fa9;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h1>물 소비 습관 자가진단 (for MULBIT AI)</h1>
+      <h2>
+        생활 속 물 소비 습관을 자가진단해보고, 물빛의 AI 솔루션을 받아보세요!
+      </h2>
+      <form id="survey-form">
+        <div class="section">
+          <h3>생활 1</h3>
+        </div>
+
+        <div class="question">
+          <p>1. 일 평균 세면 시간은 얼마나 되시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />15분 이상</label>
+            <label><input type="radio" name="q1" value="2" />10~15분</label>
+            <label><input type="radio" name="q1" value="3" />5~10분</label>
+            <label><input type="radio" name="q1" value="4" />1~5분</label>
+            <label><input type="radio" name="q1" value="5" />1분 이하</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>2. 일 평균 샤워 시간은 얼마나 되시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />30분 이상</label>
+            <label><input type="radio" name="q1" value="2" />20~30분</label>
+            <label><input type="radio" name="q1" value="3" />10~20분</label>
+            <label><input type="radio" name="q1" value="4" />5~10분</label>
+            <label><input type="radio" name="q1" value="5" />5분 이하</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>3. 일주일에 평균 몇 번 욕조를 사용하시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />7회 이상</label>
+            <label><input type="radio" name="q1" value="2" />4~6회</label>
+            <label><input type="radio" name="q1" value="3" />2~3회</label>
+            <label><input type="radio" name="q1" value="4" />1회</label>
+            <label
+              ><input type="radio" name="q1" value="5" />거의 사용하지
+              않음</label
+            >
+          </div>
+        </div>
+
+        <div class="question">
+          <p>4. 일주일에 평균 몇 번 세탁기를 사용하시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />7회 이상</label>
+            <label><input type="radio" name="q1" value="2" />4~6회</label>
+            <label><input type="radio" name="q1" value="3" />2~3회</label>
+            <label><input type="radio" name="q1" value="4" />1회</label>
+            <label
+              ><input type="radio" name="q1" value="5" />거의 사용하지
+              않음</label
+            >
+          </div>
+        </div>
+
+        <div class="question">
+          <p>5. 세탁 시 평균 세탁물의 양은 어느 정도인가요?</p>
+          <div class="options">
+            <label
+              ><input type="radio" name="q1" value="1" />세탁기 최대 용량의
+              75%~100%</label
+            >
+            <label
+              ><input type="radio" name="q1" value="2" />세탁기 최대 용량의
+              50%~75%</label
+            >
+            <label
+              ><input type="radio" name="q1" value="3" />세탁기 최대 용량의
+              25%~50%</label
+            >
+            <label
+              ><input type="radio" name="q1" value="4" />세탁기 최대 용량의 25%
+              이하</label
+            >
+            <label
+              ><input type="radio" name="q1" value="5" />거의 사용하지
+              않음</label
+            >
+          </div>
+        </div>
+
+        <div class="question">
+          <p>6. 세탁 시 헹굼 기능을 몇 번 사용하시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />3회 이상</label>
+            <label><input type="radio" name="q1" value="2" />2회</label>
+            <label><input type="radio" name="q1" value="3" />1회</label>
+            <label><input type="radio" name="q1" value="4" />가끔 사용함</label>
+            <label
+              ><input type="radio" name="q1" value="5" />거의 사용하지
+              않음</label
+            >
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>생활 2</h3>
+        </div>
+
+        <div class="question">
+          <p>1. 세면 중에 물을 잠그시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>2. 샤워 중에 물을 잠그시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>3. 양치 중에 물을 잠그시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>4. 양치 시 양치컵을 사용하시는 편입니까?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>5. 설거지 시 물을 잠그시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>6. 설거지 시 설거지통을 사용하시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>7. 싱크대 사용 시 물 조리개를 사용하시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>절수장치</h3>
+        </div>
+
+        <div class="question">
+          <p>1. 수도의 감압밸브를 조절하였나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>2. 양변기용 절수기를 사용하고 있나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>3. 절수형 샤워헤드를 사용하고 있나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>4. 절수형 수도꼭지 헤드를 사용하고 있나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>5. 절수 기기를 적극적으로 구입하려고 노력하시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />네</label>
+            <label><input type="radio" name="q1" value="2" />아니오</label>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>인식</h3>
+        </div>
+
+        <div class="question">
+          <p>
+            1. 대한민국(또는 거주지역)의 물 부족 위험도에 대해 인식하고 있나요?
+          </p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />전혀 모름</label>
+            <label><input type="radio" name="q1" value="2" />잘 모름</label>
+            <label><input type="radio" name="q1" value="3" />약간 앎</label>
+            <label><input type="radio" name="q1" value="4" />대체로 앎</label>
+            <label><input type="radio" name="q1" value="5" />매우 잘 앎</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>
+            2. 물 절약에 대한 필요성에 대해 어느정도 인식하고 있다고
+            생각하시나요?
+          </p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />전혀 모름</label>
+            <label><input type="radio" name="q1" value="2" />잘 모름</label>
+            <label><input type="radio" name="q1" value="3" />약간 앎</label>
+            <label><input type="radio" name="q1" value="4" />대체로 앎</label>
+            <label><input type="radio" name="q1" value="5" />매우 잘 앎</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>3. 실제로 일상생활에서 물 절약을 실천하고 있다고 생각하시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />전혀 모름</label>
+            <label><input type="radio" name="q1" value="2" />잘 모름</label>
+            <label><input type="radio" name="q1" value="3" />약간 앎</label>
+            <label><input type="radio" name="q1" value="4" />대체로 앎</label>
+            <label><input type="radio" name="q1" value="5" />매우 잘 앎</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>4. 개개인의 물 절약이 수자원 보존에 도움이 된다고 생각하시나요?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />전혀 모름</label>
+            <label><input type="radio" name="q1" value="2" />잘 모름</label>
+            <label><input type="radio" name="q1" value="3" />약간 앎</label>
+            <label><input type="radio" name="q1" value="4" />대체로 앎</label>
+            <label><input type="radio" name="q1" value="5" />매우 잘 앎</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>
+            5. 물 절약 캠페인이 실제 수자원 보존에 도움이 된다고 생각하나요?
+          </p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1" />전혀 모름</label>
+            <label><input type="radio" name="q1" value="2" />잘 모름</label>
+            <label><input type="radio" name="q1" value="3" />약간 앎</label>
+            <label><input type="radio" name="q1" value="4" />대체로 앎</label>
+            <label><input type="radio" name="q1" value="5" />매우 잘 앎</label>
+          </div>
+        </div>
+
+        <!-- 나머지 질문들도 위와 같은 형식으로 추가 -->
+
+        <div class="submit-btn">
+          <button type="submit" onclick="location.href='main.html'">
+            제출하기
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script></script>
+  </body>
+</html>

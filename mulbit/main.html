@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>물빛</title>
+    <meta name="description" content="물절약 서포팅 서비스 물빛입니다." />
+    <meta name="author" content="Team MULBIT" />
+    <!-- favicon, 추후에 일러스트 작업 -->
+    <link rel="icon" type="image/png" href="./imgs/favicon.png" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- gmarket sans -->
+    <link
+      href="https://webfontworld.github.io/gmarket/GmarketSans.css"
+      rel="stylesheet"
+    />
+    <!-- arrow button -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- tab -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="./main.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">
+        <a href="#">MULBIT</a>
+      </div>
+      <button class="header__user-icon" data-link="#my-page">
+        <i class="fa-solid fa-user fa-lg"></i>
+      </button>
+    </header>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+      <ul class="navbar__menu">
+        <li>
+          <button class="navbar__item" data-link="#local-water">
+            <img
+              src="./imgs/nav-local-water.png"
+              alt="local-water"
+              style="width: 30px; object-fit: cover"
+            />
+          </button>
+        </li>
+        <li>
+          <button class="navbar__item" data-link="#my-water">
+            <img
+              src="./imgs/nav-my-water.png"
+              alt="my-water"
+              style="width: 30px; object-fit: cover"
+            />
+          </button>
+        </li>
+        <li>
+          <button class="navbar__item" data-link="#coin">
+            <img
+              src="./imgs/nav-coin.png"
+              alt="coin"
+              style="width: 30px; object-fit: cover"
+            />
+          </button>
+        </li>
+        <li>
+          <button class="navbar__item" data-link="#ai-solution">
+            <img
+              src="./imgs/nav-ai.png"
+              alt="ai"
+              style="width: 30px; object-fit: cover"
+            />
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="section main">
+      <div class="home__text">
+        <h1 class="home-title">물 빛</h1>
+        <h2 class="home-description">물 절약의 시작, 물빛과 함께</h2>
+      </div>
+      <div class="home__cards">
+        <div class="home__card">
+          <img
+            id="local-water-card"
+            src="imgs\localWaterCard.png"
+            style="object-fit: cover"
+          />
+          <div class="home__info">
+            <h3>우리 지역 수자원</h3>
+            <p>
+              우리 지역의 수원지 정보를 조회하고, 딥러닝기술을 기반으로 예측된
+              이번 달 가용 수자원 량을 확인하세요!
+            </p>
+            <a class="home__btn" href="#local-water" title="to local-water">
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <!-- <button class="home__btn" data-link="#local-water">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button> -->
+          </div>
+        </div>
+        <div class="home__card">
+          <img
+            id="my-water-card"
+            src="imgs\myWaterCard.png"
+            style="object-fit: cover"
+          />
+          <div class="home__info">
+            <h3>나의 수도 소비량</h3>
+            <p>
+              나의 수도 사용량을 확인하고, 물 절약을 위한 팁을 제공받으세요!
+            </p>
+            <a class="home__btn" href="#my-water" title="to my-water">
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <!-- <button class="home__btn" data-link="#my-water">Read More</button> -->
+          </div>
+        </div>
+        <div class="home__card">
+          <img
+            id="coin-card"
+            src="imgs\coinCard.png"
+            style="object-fit: cover"
+          />
+          <div class="home__info">
+            <h3>물빛 코인</h3>
+            <p>
+              물 절약 기여도를 쌓아 물빛 코인을 적립하세요! 적립된 코인은 다양한
+              혜택으로 환급됩니다.
+            </p>
+            <a class="home__btn" href="#coin" title="to coin">
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <!-- <button class="home__btn" data-link="#coin">Read More</button> -->
+          </div>
+        </div>
+        <div class="home__card">
+          <img
+            id="ai-solution-card"
+            src="imgs\aiCard.png"
+            style="object-fit: cover"
+          />
+          <div class="home__info">
+            <h3>AI 솔루션</h3>
+            <p>
+              자가진단 후 나의 물 소비 습관을 분석하고 다양한 AI 솔루션을
+              제공받으세요!
+            </p>
+            <a class="home__btn" href="#ai-solution" title="to ai-solution">
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <!-- <button class="home__btn" data-link="#ai-solution">
+              Read More
+            </button> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local Water (우리 지역 수자원) -->
+    <section id="local-water" class="section">
+      <div class="section__text">
+        <h3>우리 지역 수자원</h3>
+        <h4>
+          우리 지역의 수원지 정보를 조회하고, 딥러닝기술을 기반으로 예측된 이번
+          달 가용 수자원 량을 확인하세요!
+        </h4>
+      </div>
+      <div class="section__content">
+        <ion-icon
+          class="slider-arrow arrow-left"
+          name="chevron-back-outline"
+        ></ion-icon>
+
+        <div class="slider">
+          <ul class="slider-track">
+            <li class="slider-slide">
+              <div class="local-water__content">
+                <div class="local-water__left">
+                  <img
+                    src="imgs/local-water-1.png"
+                    alt="위험"
+                    style="width: 440px; object-fit: cover"
+                  />
+                  <div class="local-water__left__text">
+                    <p>20.47%</p>
+                    <p>(평년 동월 : 33.27%)</p>
+                  </div>
+                </div>
+                <div class="local-water__right">
+                  <div class="location">
+                    <img
+                      src="./imgs/location.png"
+                      alt="location search"
+                      style="width: 450px; object-fit: cover"
+                    />
+                  </div>
+                  <div class="local-water__right__text">
+                    <p>
+                      4월 <span class="location">광주광역시 북구 용봉동</span>의
+                    </p>
+                    <p>
+                      수자원은
+                      <span class="status-danger">위험 단계</span>입니다.
+                    </p>
+                    <p>(1인 가구)</p>
+                    <p>
+                      물빛짱 님의 가용 수자원량은
+                      <span class="amount">4,449L</span>입니다.
+                    </p>
+                    <p>
+                      예상 수도요금은 <span class="cost">2,357원</span>입니다.
+                    </p>
+                  </div>
+                  <div class="more">
+                    <img
+                      src="./imgs/용수공급체계.png"
+                      alt="용수공급체계"
+                      style="width: 360px; object-fit: cover"
+                    />
+                    <a
+                      href="https://www.drought.go.kr/menu/onemap/oneMapMain.do?pagenm=sisul#"
+                      class="more-info"
+                      target="_blank"
+                      >상세 조회</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-slide">
+              <div class="local-water__content">
+                <div class="local-water__left">
+                  <img
+                    src="imgs/local-water-2.png"
+                    alt="안전"
+                    style="width: 440px; object-fit: cover"
+                  />
+                  <div class="local-water__left__text">
+                    <p>28.61%</p>
+                    <p>(평년 동월 : 30.52%)</p>
+                  </div>
+                </div>
+                <div class="local-water__right">
+                  <div class="location">
+                    <img
+                      src="./imgs/location.png"
+                      alt="location search"
+                      style="width: 450px; object-fit: cover"
+                    />
+                  </div>
+                  <div class="local-water__right__text">
+                    <p>
+                      5월 <span class="location">광주광역시 북구 용봉동</span>의
+                    </p>
+                    <p>
+                      수자원은
+                      <span class="status-warning">주의 단계</span>입니다.
+                    </p>
+                    <p>(1인 가구)</p>
+                    <p>
+                      물빛짱 님의 가용 수자원량은
+                      <span class="amount">6,591L</span>입니다.
+                    </p>
+                    <p>
+                      예상 수도요금은 <span class="cost">3,493원</span>입니다.
+                    </p>
+                  </div>
+                  <div class="more">
+                    <img
+                      src="./imgs/용수공급체계.png"
+                      alt="용수공급체계"
+                      style="width: 360px; object-fit: cover"
+                    />
+                    <a
+                      href="https://www.drought.go.kr/menu/onemap/oneMapMain.do?pagenm=sisul#"
+                      class="more-info"
+                      target="_blank"
+                      >상세 조회</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-slide">
+              <div class="local-water__content">
+                <div class="local-water__left">
+                  <img
+                    src="imgs/local-water-3.png"
+                    alt="경고"
+                    style="width: 440px; object-fit: cover"
+                  />
+                  <div class="local-water__left__text">
+                    <p>26.82%</p>
+                    <p>(평년 동월 : 26.60%)</p>
+                  </div>
+                </div>
+                <div class="local-water__right">
+                  <div class="location">
+                    <img
+                      src="./imgs/location.png"
+                      alt="location search"
+                      style="width: 450px; object-fit: cover"
+                    />
+                  </div>
+                  <div class="local-water__right__text">
+                    <p>
+                      6월 <span class="location">광주광역시 북구 용봉동</span>의
+                    </p>
+                    <p>
+                      수자원은 <span class="status-safe">안전 단계</span>입니다.
+                    </p>
+                    <p>(1인 가구)</p>
+                    <p>
+                      물빛짱 님의 가용 수자원량은
+                      <span class="amount">7,462L</span>입니다.
+                    </p>
+                    <p>
+                      예상 수도요금은 <span class="cost">3,955원</span>입니다.
+                    </p>
+                  </div>
+                  <div class="more">
+                    <img
+                      src="./imgs/용수공급체계.png"
+                      alt="용수공급체계"
+                      style="width: 360px; object-fit: cover"
+                    />
+                    <a
+                      href="https://www.drought.go.kr/menu/onemap/oneMapMain.do?pagenm=sisul#"
+                      class="more-info"
+                      target="_blank"
+                      >상세 조회</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <ion-icon
+          class="slider-arrow arrow-right"
+          name="chevron-forward-outline"
+        ></ion-icon>
+      </div>
+      <nav class="slider-interface">
+        <button class="slider-dot" data-index="0"></button>
+        <button class="slider-dot" data-index="1"></button>
+        <button class="slider-dot" data-index="2"></button>
+      </nav>
+    </section>
+
+    <!-- 나의 수도 소비량 -->
+    <section id="my-water" class="section">
+      <div class="section__title">
+        <h3>나의 수도 소비량</h3>
+        <h4>나의 수도 소비량을 확인해보세요!</h4>
+      </div>
+      <div class="section__content">
+        <ion-icon
+          class="slider-arrow arrow-left"
+          name="chevron-back-outline"
+        ></ion-icon>
+        <div class="slider">
+          <ul class="slider-track">
+            <li class="slider-slide">
+              <div class="my-water__chart">
+                <div id="chart1"></div>
+              </div>
+            </li>
+            <li class="slider-slide">
+              <div class="my-water__chart">
+                <div id="chart2"></div>
+              </div>
+            </li>
+            <li class="slider-slide">
+              <div class="my-water__chart">
+                <div id="chart3"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <ion-icon
+          class="slider-arrow arrow-right"
+          name="chevron-forward-outline"
+        ></ion-icon>
+        <nav class="slider-interface">
+          <button class="slider-dot" data-index="0"></button>
+          <button class="slider-dot" data-index="1"></button>
+          <button class="slider-dot" data-index="2"></button>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 물빛코인 -->
+    <section id="coin" class="section">
+      <div class="section__title">
+        <h3>물빛 코인</h3>
+        <h4>물 절약을 실천해서 물빛코인을 받아볼 수 있어요!</h4>
+      </div>
+
+      <!-- 원래 id없음 -->
+      <div class="section__content">
+        <div class="coin__content__img">
+          <img
+            class="coinImg"
+            src="imgs\coin-front.png"
+            alt="coin"
+            style="width: 210px"
+          />
+        </div>
+        <div class="coin__content__text">
+          <h2>나의코인</h2>
+          <h3>36000</h3>
+        </div>
+        <div class="coin__cards">
+          <div class="coin__card" id="coinCard1">
+            <span>NFT</span>
+          </div>
+          <div class="coin__card" id="coinCard2">
+            <span>포인트 교환</span>
+          </div>
+          <div class="coin__card" id="coinCard3">
+            <span>지역화폐</span>
+          </div>
+          <div class="coin__card" id="coinCard4">
+            <span>제휴 상품권</span>
+          </div>
+          <div class="coin__card" id="coinCard5">
+            <span
+              >지역 먹거리 <br />
+              상점</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI솔루션 -->
+    <section id="ai-solution" class="section">
+      <div class="section__title">
+        <h3>AI 솔루션</h3>
+        <h4>
+          자가진단 후 나의 물 소비 습관을 분석하고 다양한 ai 솔루션을
+          받아보세요!
+        </h4>
+      </div>
+      <div class="section__content">
+        <div class="ai-solution__container">
+          <ul class="tabs">
+            <li class="tab current" data-tab="tab-1">진단결과</li>
+            <li class="tab" data-tab="tab-2">진단분석</li>
+            <li class="tab" data-tab="tab-3">이전진단</li>
+          </ul>
+
+          <div id="tab-1" class="tab-content current">
+            <p>진단결과 내용</p>
+            <p>이렇게진단내요응ㄹ</p>
+          </div>
+
+          <div id="tab-2" class="tab-content">
+            <p>진단분석내용</p>
+          </div>
+
+          <div id="tab-3" class="tab-content">
+            <p>이전진단내용</p>
+          </div>
+        </div>
+        <div id="selftestlink">
+          <a class="selftest-button" href="./selftest.html"
+            ><span>Go!</span><span>자가진단 바로가기</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- 마이페이지 -->
+    <section id="my-page" class="section">
+      <div class="section__title">
+        <h3>계정 관리</h3>
+      </div>
+      <div class="section__content">
+        <ul class="mytab-menu">
+          <li><a href="#account">계정</a></li>
+          <li><a href="#address">주소</a></li>
+          <li><a href="#coin">내 코인</a></li>
+        </ul>
+        <div class="mytab-content">
+          <div id="account">
+            <div class="mytab-content__item">
+              <div class="mytab-content__left">
+                <div class="question">카카오 ID</div>
+                <div class="answer">mulbit</div>
+              </div>
+              <div class="mytab-content__right">
+                <button class="edit">수정</button>
+              </div>
+            </div>
+            <div class="mytab-content__item">
+              <div class="mytab-content__left">
+                <div class="question">이메일</div>
+                <div class="answer">mulbit@gmail.com</div>
+              </div>
+              <div class="mytab-content__right">
+                <button class="edit">수정</button>
+              </div>
+            </div>
+            <div class="mytab-content__item">
+              <div class="mytab-content__left">
+                <div class="question">닉네임</div>
+                <div class="answer">물빛짱</div>
+              </div>
+              <div class="mytab-content__right">
+                <button class="edit">수정</button>
+              </div>
+            </div>
+            <div class="mytab-content__item">
+              <div class="mytab-content__left">
+                <div class="question">전자납부번호</div>
+                <div class="answer">1234-5678-90</div>
+              </div>
+              <div class="mytab-content__right">
+                <button class="edit">수정</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="address">
+            <div class="mytab-content__item">
+              <div class="mytab-content__left">
+                <div class="question">주소</div>
+                <div class="answer">
+                  광주광역시 북구용봉로 77 (전남대학교)
+                  <br />
+                  공과대학 7호관 229호
+                </div>
+              </div>
+              <div class="mytab-content__right">
+                <button class="edit">수정</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="coin">
+            <div class="mytab-content__item">
+              <div class="mytab-content__left">
+                <div class="question">나의물빛코인💰</div>
+                <div class="answer">36000</div>
+              </div>
+            </div>
+            <div class="mytab-content__item" id="coin-payment">
+              <div class="mytab-content__left">
+                <div class="question">코인 지급 내역💰</div>
+                <div class="answer" id="searchDate">
+                  <label class="coin-searchDate">조회 기간</label>
+                  <input type="date" />
+                  <input type="date" />
+                  <button>조회</button>
+                </div>
+                <ul class="coin-lists">
+                  <li class="coin-list">
+                    <img
+                      src="imgs\coin-front.png"
+                      alt="코인"
+                      style="width: 60px"
+                    />
+                    <div class="coin-list__item">
+                      <div class="coin-list__left">
+                        <div class="coin-list__date">6월</div>
+                        <!-- <div class="coin-list__time">12:30</div> -->
+                      </div>
+                      <div class="coin-list__right">
+                        <div class="coin-month">+3000</div>
+                        <div class="coin-total">36000</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="coin-list">
+                    <img
+                      src="imgs\coin-front.png"
+                      alt="코인"
+                      style="width: 60px"
+                    />
+                    <div class="coin-list__item">
+                      <div class="coin-list__left">
+                        <div class="coin-list__date">5월</div>
+                        <!-- <div class="coin-list__time">11:30</div> -->
+                      </div>
+                      <div class="coin-list__right">
+                        <div class="coin-month">+5000</div>
+                        <div class="coin-total">33000</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="coin-list">
+                    <img
+                      src="imgs\coin-front.png"
+                      alt="코인"
+                      style="width: 60px"
+                    />
+                    <div class="coin-list__item">
+                      <div class="coin-list__left">
+                        <div class="coin-list__date">4월</div>
+                        <!-- <div class="coin-list__time">12:30</div> -->
+                      </div>
+                      <div class="coin-list__right">
+                        <div class="coin-month">+10000</div>
+                        <div class="coin-total">28000</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="coin-list">
+                    <img
+                      src="imgs\coin-front.png"
+                      alt="코인"
+                      style="width: 60px"
+                    />
+                    <div class="coin-list__item">
+                      <div class="coin-list__left">
+                        <div class="coin-list__date">3월</div>
+                        <!-- <div class="coin-list__time">8:45</div> -->
+                      </div>
+                      <div class="coin-list__right">
+                        <div class="coin-month">+3000</div>
+                        <div class="coin-total">18000</div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="mytab-content__right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arrow up -->
+    <aside>
+      <a class="arrow-up" href="#home" title="back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </aside>
+  </body>
+</html>
