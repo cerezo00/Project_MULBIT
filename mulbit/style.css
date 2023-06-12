@@ -6,8 +6,10 @@
   --color-title: #191f28;
   --color-subtitle: #8b95a1;
   --color-body: #333d4b;
+  --color-description: #6b7684;
   --color-blue: #91bef3;
-  --color-dark-blue: #0158ab;
+  --color-ikea-blue: #105fa9;
+  --color-toss-blue: #3182f6;
 
   /* Fonst size */
   --font-title: 140px;
@@ -314,7 +316,7 @@ h4 {
 }
 
 .home__btn:hover {
-  background: var(--color-dark-blue);
+  background: var(--color-ikea-blue);
   color: white;
 }
 
@@ -414,18 +416,125 @@ h4 {
 }
 
 .local-water__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.local-water__left img {
   animation: up-down 1.4s infinite ease-in-out alternate;
+  margin-bottom: 20px;
 }
 
-.local-water__text-1 {
-  font-size: 36px;
-  color: var(--color-body);
-  margin: 0 0 40px 0;
-}
-
-.local-water__text-2 {
+.local-water__left__text :nth-child(1) {
   font-size: 24px;
-  color: var(--color-subtitle);
+  color: var(--color-body);
+  margin: 0 10px;
+  display: inline;
+}
+
+.local-water__left__text :nth-child(2) {
+  font-size: 16px;
+  color: var(--color-body);
+  margin: 0;
+  display: inline;
+}
+
+.local-water__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 75%;
+}
+
+.local-water__right__text {
+  color: var(--color-body);
+  margin: 0 10px;
+  display: inline;
+}
+
+.local-water__right__text :nth-child(1) {
+  font-size: 36px;
+  margin: 0;
+}
+
+.local-water__right__text :nth-child(2) {
+  font-size: 36px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+.status-safe {
+  color: rgb(0, 172, 238);
+}
+
+.status-warning {
+  color: rgb(255, 153, 0);
+}
+
+.status-danger {
+  color: rgb(255, 0, 0);
+}
+
+.local-water__right__text :nth-child(3) {
+  font-size: 12px;
+  margin: 60px 0 0 0;
+  color: var(--color-description);
+}
+
+.local-water__right__text :nth-child(4) {
+  font-size: 24px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: var(--color-description);
+}
+
+.local-water__right__text :nth-child(4) span {
+  font-size: 24px;
+  color: var(--color-ikea-blue);
+  margin: 0;
+}
+
+.local-water__right__text :nth-child(5) {
+  font-size: 24px;
+  margin: 0;
+  color: var(--color-description);
+}
+
+.local-water__right__text :nth-child(5) span {
+  font-size: 24px;
+  color: var(--color-ikea-blue);
+  margin: 0;
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: white;
+  color: var(--color-ikea-blue);
+  border-radius: 10px;
+  outline: solid 2px var(--color-ikea-blue);
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 20px;
+  width: 100px;
+  height: 30px;
+}
+
+.more-info:hover {
+  background-color: rgb(202, 236, 247);
 }
 
 #local-water .active {
@@ -830,7 +939,7 @@ p {
 
 .mytab-menu a.active {
   font-weight: bold;
-  color: var(--color-dark-blue);
+  color: var(--color-ikea-blue);
 }
 
 .mytab-content__item {
