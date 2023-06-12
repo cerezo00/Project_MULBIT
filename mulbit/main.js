@@ -436,25 +436,6 @@ document.addEventListener('click', activate, false);
 window.addEventListener('load', () => init(slides.length - 1), false);
 
 // !! MULBIT COIN animation
-// const coinImg = document.querySelector('.coinImg');
-// const coinImgContainer = document.querySelector('.coin__content__img');
-// const coinContentText = document.querySelector('.coin__content__text');
-
-// const showCoinText = () => {
-//   // coinContentText.classList.add("fadeIn")
-//   coinContentText.style.opacity = 1;
-//   coinContentText.style.animation = 'fadeIn 1s ease forwards';
-// };
-
-// const handleAnimationCircle = () => {
-//   const coinImgContainerWidth = coinImgContainer.offsetWidth;
-//   const coinImgWidth = coinImg.offsetWidth;
-//   if (coinImg.offsetLeft + coinImgWidth >= coinImgContainerWidth / 2) {
-//     coinImg.classList.add('paused');
-//     showCoinText();
-//   }
-// };
-// coinImg.addEventListener('animationiteration', handleAnimationCircle);
 
 const coinImg = document.querySelector('.coinImg');
 const coinImgContainer = document.querySelector('.coin__content__img');

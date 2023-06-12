@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./imgs/favicon.png" />
     <title>물 소비 습관 자가진단</title>
-
     <script defer src="./main.js"></script>
 
     <style>
@@ -36,11 +36,14 @@
       h1 {
         margin: 0;
         font-size: 36px;
+        color: #191f28;
       }
 
       h2 {
-        font-size: 16px;
+        font-size: 24px;
         font-weight: 50;
+        color: #6b7684;
+        margin: 6px 0 0 0;
       }
 
       h3 {
@@ -56,16 +59,38 @@
         margin-bottom: 5px;
       }
 
+      button {
+        all: unset;
+      }
+
       .submit-btn {
-        margin-top: 20px;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: #105fa9;
+        border-radius: 10px;
+        outline: solid 2px #105fa9;
+        text-decoration: none;
+        font-size: 14px;
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        margin: 50px auto 0 auto;
+        font-weight: bold;
+      }
+
+      .submit-btn:hover {
+        background-color: #105fa9;
+        color: white;
       }
     </style>
   </head>
 
   <body>
     <div class="box">
-      <h1>물 소비 습관 자가진단</h1>
+      <h1>물 소비 습관 자가진단 (for MULBIT AI)</h1>
       <h2>
         생활 속 물 소비 습관을 자가진단해보고, 물빛의 AI 솔루션을 받아보세요!
       </h2>
@@ -338,37 +363,12 @@
 
         <div class="submit-btn">
           <button type="submit" onclick="location.href='main.html'">
-            Submit
+            제출하기
           </button>
         </div>
       </form>
     </div>
 
-    <script>
-      const submitBtn = document.querySelector('.submit-btn');
-
-      submitBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-        window.location.href = 'main.html#ai-solution';
-      });
-
-      const form = document.getElementById('survey-form');
-      form.addEventListener('submit', function (event) {
-        event.preventDefault(); // 폼 제출 시 기본 동작(페이지 새로고침)을 막음
-
-        // 각 질문에 대한 사용자 선택 값을 가져옴
-        const q1 = document.querySelector('input[name="q1"]:checked').value;
-        // 나머지 질문들도 위와 같은 방식으로 추가
-
-        // 결과 출력
-        console.log('Question 1:', q1);
-        // 나머지 질문들도 위와 같은 방식으로 추가
-
-        // 결과를 서버로 전송하거나 다른 처리를 수행할 수 있음
-
-        // 폼 초기화
-        form.reset();
-      });
-    </script>
+    <script></script>
   </body>
 </html>
